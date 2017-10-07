@@ -10,7 +10,7 @@ public class StringService {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getPhones() {
-        return "hello World...";
+        return "welcome to the string-Service";
     }
     
 }
