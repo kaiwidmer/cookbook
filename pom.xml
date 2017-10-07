@@ -5,4 +5,43 @@
     <artifactId>cookbook</artifactId>
     <version>0.0.9</version>
     <packaging>war</packaging>
+
+    <properties>
+        <tomee.version>7.0.2</tomee.version>
+        <openejb.javaee.api>7.0</openejb.javaee.api>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source> 
+    </properties>
+    
+    <dependencies>
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>${openejb.javaee.api}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <finalName>ROOT</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.tomee.maven</groupId>
+        <artifactId>tomee-maven-plugin</artifactId>
+        <version>${tomee.version}</version>
+        <configuration>
+          <tomeeClassifier>webprofile</tomeeClassifier>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
 </project>
