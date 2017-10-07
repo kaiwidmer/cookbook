@@ -1,4 +1,4 @@
-package ch.widmer.cookbook.rest;
+package ch.widmer.kai.cookbook.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,6 +10,7 @@ public class StringService {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getPhones() {
-        return "hello Dennis";
+        return "hello World...";
     }
+    
 }
