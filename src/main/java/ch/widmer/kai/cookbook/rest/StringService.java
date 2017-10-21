@@ -7,9 +7,10 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/string")
 public class StringService {
+    
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getPhones() {
+    public String getString() {
         return "welcome to the string-Service";
     }
     

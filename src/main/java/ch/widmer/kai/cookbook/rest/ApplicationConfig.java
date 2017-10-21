@@ -11,6 +11,6 @@ import javax.ws.rs.core.Application;
 public class ApplicationConfig extends Application {
     @Override
     public Set<Class<?>> getClasses() {
-        return new HashSet<Class<?>>(Arrays.asList(StringService.class));
+        return new HashSet<Class<?>>(Arrays.asList(StringService.class, RecipeService.class));
     }
 }
