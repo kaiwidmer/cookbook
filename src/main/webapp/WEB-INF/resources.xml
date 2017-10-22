@@ -1,8 +1,8 @@
 <resources>
 <Resource id="cookbookDS" type="javax.sql.DataSource">
     JdbcDriver = com.mysql.jdbc.Driver
-    JdbcUrl = jdbc:mysql://db/petclinic?nullNamePatternMatchesAll=true
+    JdbcUrl = jdbc:mysql://db/cookbook?nullNamePatternMatchesAll=true
     Password = password
-    UserName = petclinic
+    UserName = cookbook
 </Resource>
 </resources>
