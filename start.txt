@@ -1,0 +1,4 @@
+asadmin> create-domain --adminport 4848 cookbook
+
+asadmin start-domain cookbook
+asadmin stop-domain cookbook

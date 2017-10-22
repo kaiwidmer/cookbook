@@ -3,14 +3,13 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
         http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
              version="1.0">
-    <persistence-unit name="cookbookPU" transaction-type="JTA">
-        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <!--<persistence-unit name="cookbookPU" transaction-type="JTA">
         <class>ch.widmer.kai.cookbook.domain.Recipe</class>
-        <jta-data-source>cookbookDS</jta-data-source>
+        <!--<jta-data-source>cookbookDS</jta-data-source>
         <properties>
           <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)" />
           <property name="openjpa.jdbc.DBDictionary" value="mysql" />
           <property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO" />
         </properties>
-    </persistence-unit>
+    </persistence-unit>!-->
 </persistence>
