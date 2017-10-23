@@ -11,6 +11,13 @@ import javax.ws.rs.core.Application;
 public class ApplicationConfig extends Application {
     @Override
     public Set<Class<?>> getClasses() {
-        return new HashSet<Class<?>>(Arrays.asList(StringService.class, RecipeService.class));
+        HashSet<Class<?>> resourceClasses = new HashSet<>(Arrays.asList(StringService.class, RecipeService.class));
+        addOtherClasses(resourceClasses);
+        return resourceClasses;
     }
+    
+    private void addOtherClasses(HashSet<Class<?>> resourceClasses) {
+        resourceClasses.add(AuthenticationFilter.class);
+    }
+    
 }
