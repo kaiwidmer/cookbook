@@ -14,16 +14,15 @@ import ch.widmer.kai.cookbook.domain.Recipe;
 
 public class RecipeRepository {
     
-    /*@PersistenceContext
-    private EntityManager entityManager;*/
+    @PersistenceContext
+    private EntityManager entityManager;
     
     public List<Recipe> findAll() {
-        /*CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Recipe> cq = cb.createQuery(Recipe.class);
         Root<Recipe> rootEntry = cq.from(Recipe.class);
         CriteriaQuery<Recipe> all = cq.select(rootEntry);
         TypedQuery<Recipe> allQuery = entityManager.createQuery(all);
-        return allQuery.getResultList();*/
-       return new ArrayList<>();
+        return allQuery.getResultList();
     }
 }

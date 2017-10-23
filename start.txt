@@ -1,4 +1,7 @@
-asadmin> create-domain --adminport 4848 cookbook
+asadmin create-domain --adminport 4848 cookbook
+asadmin enable-secure-admin
 
 asadmin start-domain cookbook
 asadmin stop-domain cookbook
+
+JdbcUrl = jdbc:mysql://db/cookbook?nullNamePatternMatchesAll=true
