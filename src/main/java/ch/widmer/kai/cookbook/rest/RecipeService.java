@@ -2,7 +2,6 @@ package ch.widmer.kai.cookbook.rest;
 
 import java.util.List;
 
-import javax.annotation.security.DenyAll;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -20,7 +19,6 @@ public class RecipeService {
         
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @DenyAll
     public List<Recipe> findAll() {
         return recipeRepository.findAll();
     }
