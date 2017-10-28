@@ -10,9 +10,11 @@ import javax.ws.rs.core.MediaType;
 
 import ch.widmer.kai.cookbook.domain.Recipe;
 import ch.widmer.kai.cookbook.repository.RecipeRepository;
+import ch.widmer.kai.cookbook.rest.security.Secured;
 
+@Secured
 @Path("/recipes")
-public class RecipeService {
+public class RecipeResource {
     
     @Inject
     private RecipeRepository recipeRepository;
