@@ -6,7 +6,9 @@ import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.SecurityContext;
 
 import ch.widmer.kai.cookbook.domain.Recipe;
 import ch.widmer.kai.cookbook.repository.RecipeRepository;
@@ -18,6 +20,9 @@ public class RecipeResource {
     
     @Inject
     private RecipeRepository recipeRepository;
+    
+    @Context
+    private SecurityContext cookbookSecurityContext;
         
     @GET
     @Produces(MediaType.APPLICATION_JSON)
